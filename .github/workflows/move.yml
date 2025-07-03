@@ -3,7 +3,7 @@ name: Deploy Move packages to github packages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
+    branches: ["main"]
 
 jobs:
   # Build job
@@ -38,4 +38,3 @@ jobs:
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          
