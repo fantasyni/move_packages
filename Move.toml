@@ -4,8 +4,10 @@ version = "1.0.0"
 authors = []
 
 [addresses]
+test = "_"
 
 [dev-addresses]
+test = "0x12343"
 
 [dependencies.AptosFramework]
 git = "https://github.com/aptos-labs/aptos-framework.git"
