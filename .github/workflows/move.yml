@@ -34,7 +34,7 @@ jobs:
         run: npx ts-node ghscripts/packages.ts
       - name: Publish Move Packages
         run: |
-          cd build/move_packages
+          cd build/test
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
