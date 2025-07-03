@@ -6,7 +6,7 @@ module test::test{
         let z = x + y;
         assert!(z == 100, 0);
     }
-
+ 
     #[test]
     fun test_addition() {
         test();
