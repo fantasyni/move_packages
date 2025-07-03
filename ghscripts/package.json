@@ -1,0 +1,13 @@
+{
+  "name": "@fantasyni/move_packages",
+  "version": "1.0.0",
+  "files": [
+    "bytecode_modules/",
+    "Buildinfo.yaml",
+    "package-metadata.bcs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fantasyni/move_packages.git"
+  }
+}
