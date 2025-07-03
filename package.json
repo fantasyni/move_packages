@@ -1,5 +1,5 @@
 {
-  "name": "aptos_commission",
+  "name": "move_packages",
   "version": "0.1.0",
   "license": "MIT",
   "type": "commonjs",
@@ -7,7 +7,7 @@
     "test": "vitest run"
   },
   "devDependencies": {
-    "@types/node": "^22.10.1"
+    "@types/node": "^22.10.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
   }
