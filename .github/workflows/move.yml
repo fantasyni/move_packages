@@ -28,13 +28,10 @@ jobs:
           curl -fsSL "https://aptos.dev/scripts/install_cli.sh" | sh
           aptos --version
       - name: Build Move Packages
-        run: |
-          aptos move build --included-artifacts none --save-metadata
-      - name: Run ghscript
-        run: npx ts-node ghscripts/packages.ts
+        run: aptos move build --included-artifacts none --save-metadata
+      - name: SyncPackageJson
+        run: npx ts-node ghscripts/sync_package_json.ts
       - name: Publish Move Packages
-        run: |
-          cd build/test
-          npm publish
+        run: npx ts-node ghscripts/publish_package.ts
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
