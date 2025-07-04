@@ -3,6 +3,8 @@ import fs from "fs";
 
 let cwd = process.cwd();
 
+let sync_files = ["package.json", ".npmignore"];
+
 function syncPackageJson() {
     console.log("run packages");
     console.log(cwd);
@@ -11,7 +13,14 @@ function syncPackageJson() {
 
     let build_dir = get_build_dir();
 
-    fs.copyFileSync(`${ghscripts_path}/package.json`, `${build_dir}/package.json`);
+    sync_files.forEach(function(name) {
+        let from = `${ghscripts_path}/${name}`;
+        let to = `${build_dir}/${name}`;
+
+        console.log(`copy ${from} to ${to}`);
+        
+        fs.copyFileSync(from ,to);
+    });
 }
 
 syncPackageJson();
