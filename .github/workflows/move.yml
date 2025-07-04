@@ -4,6 +4,8 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["master"]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   # Build job
@@ -28,7 +30,7 @@ jobs:
       #     curl -fsSL "https://aptos.dev/scripts/install_cli.sh" | sh
       #     aptos --version
       - name: Setup Aptos CLI
-        uses: WGB5445/aptos-cli-setup@v1
+        uses: WGB5445/aptos-cli-setup
         with:
           version: "7.5.0"
       - name: Build Move Packages
