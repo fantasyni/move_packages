@@ -2,7 +2,7 @@
   "name": "@fantasyni/move_packages",
   "version": "1.0.4",
   "files": [
-    "bytecode_modules/",
+    "bytecode_modules/*.mv",
     "Buildinfo.yaml",
     "package-metadata.bcs"
   ],
