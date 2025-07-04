@@ -9,7 +9,10 @@ function publishPackage() {
     console.log(cmd);
     
     shell.cd(build_dir);
-    shell.exec(cmd);
+    let err = shell.exec(cmd).stderr;
+    if (err) {
+        throw new Error(err);
+    }
 }
 
 publishPackage();
