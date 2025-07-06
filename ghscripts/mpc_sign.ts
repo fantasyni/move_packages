@@ -107,7 +107,7 @@ async function go() {
     console.log(`signingMessageHex ${signingMessageHex}`);
 
     // Pretend that it's an external signer that only knows bytes using a raw crypto library
-    const mpcSignTxKey = await requestMpcSign(mpcSignApi, CUSTOMER_REF_ID, signingMessageHex, ACCOUNT_KEY);
+    const mpcSignTxKey = await requestMpcSign(mpcSignApi, CUSTOMER_REF_ID + "_" + Date.now(), signingMessageHex, ACCOUNT_KEY);
 
     console.log(`transaction created, txKey: ${mpcSignTxKey}`);
     // Get sig
