@@ -90,9 +90,16 @@ async function go() {
 
     let payload = read_payload("payload_1.json");
 
+    let ledger_info = await aptos.getLedgerInfo();
+
+    console.log(ledger_info);
+
     const simpleTransaction = await aptos.transaction.build.simple({
         sender: from_user.address,
-        data: payload
+        data: payload,
+        options: {
+            expireTimestamp: Number.parseInt(ledger_info.ledger_timestamp) + 600
+        }
     });
 
     // const deserializer = new Deserializer(simpleTransaction.bcsToBytes());
