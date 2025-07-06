@@ -75,7 +75,7 @@ let from_user = {
     public_key: "0xd777e8e6b32c6762a3e387f2ff62b112993d0aa4083636a491cf619869971df5"
 }
 
-const APTOS_NETWORK: Network = NetworkToNetworkName[process.env.APTOS_NETWORK ?? Network.TESTNET];
+const APTOS_NETWORK: Network = NetworkToNetworkName[process.env.APTOS_NETWORK ?? Network.MAINNET];
 const config = new AptosConfig({ network: APTOS_NETWORK });
 const aptos = new Aptos(config);
 
@@ -91,6 +91,8 @@ async function go() {
     let payload = read_payload("payload_1.json");
 
     let ledger_info = await aptos.getLedgerInfo();
+    
+    let account_data = await aptos.getAccountInfo({accountAddress: from_user.address});
 
     console.log(ledger_info);
 
@@ -98,7 +100,9 @@ async function go() {
         sender: from_user.address,
         data: payload,
         options: {
-            expireTimestamp: Number.parseInt(ledger_info.ledger_timestamp) + 600
+            expireTimestamp: Number.parseInt(ledger_info.ledger_timestamp) + 600,
+            maxGasAmount: 100000,
+            accountSequenceNumber: Number.parseInt(account_data.sequence_number)
         }
     });
 
