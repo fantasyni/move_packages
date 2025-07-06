@@ -22,7 +22,9 @@ async function go() {
     };
 
     let results = await api.listAccounts(request);
-    console.log(results);
+
+    console.log(results.content)
+    console.log(results.content[1].pubKeys);
 }
 
 go()
