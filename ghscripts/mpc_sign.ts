@@ -84,7 +84,7 @@ async function go() {
         baseUrl: "https://api.safeheron.vip",
         apiKey: API_KEY,
         rsaPrivateKey: readFileSync(`${MPC_KEYS_PATH}/api_private.pem`).toString(),
-        safeheronRsaPublicKey: readFileSync(`${MPC_KEYS_PATH}/platform_public_key.pem`).toString(),
+        safeheronRsaPublicKey: readFileSync(`${MPC_KEYS_PATH}/platform_public.pem`).toString(),
         requestTimeout: 20000
     });
 
