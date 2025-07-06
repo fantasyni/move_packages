@@ -1,0 +1,1 @@
+npx large-package-payload-creator create --deploy-object true --sender-address 0x9b2916b5f46b5600d72c3a32624794d05bbad5e50de62853baeaad97887c386d --contract-address-name test --network testnet

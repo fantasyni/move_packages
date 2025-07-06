@@ -71,7 +71,7 @@ let MPC_KEYS_PATH = "/home/ecs-user/app/mpc/keys";
 let CUSTOMER_REF_ID = "0x9b2916b5f46b5600d72c3a32624794d05bbad5e50de62853baeaad97887c386d";
 
 let from_user = {
-    address: "0x9b2916b5f46b5600d72c3a32624794d05bbad5e50de62853baeaad97887c386d",
+    address: "0xe9b90e14385d189f53a70c7d3399e3ba30c06a7e0e5cf651f0d464fec8dfe87c",
     public_key: "0x2624d0d115d5c392045be2a074eeaa6e96d4257b752821b333865e6cfc6a6f79"
 }
 
