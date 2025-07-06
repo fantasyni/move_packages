@@ -75,7 +75,7 @@ let from_user = {
     public_key: "0xd777e8e6b32c6762a3e387f2ff62b112993d0aa4083636a491cf619869971df5"
 }
 
-const APTOS_NETWORK: Network = NetworkToNetworkName[process.env.APTOS_NETWORK ?? Network.MAINNET];
+const APTOS_NETWORK: Network = NetworkToNetworkName[process.env.APTOS_NETWORK ?? Network.TESTNET];
 const config = new AptosConfig({ network: APTOS_NETWORK });
 const aptos = new Aptos(config);
 
