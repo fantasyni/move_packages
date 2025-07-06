@@ -72,7 +72,7 @@ let CUSTOMER_REF_ID = "0x9b2916b5f46b5600d72c3a32624794d05bbad5e50de62853baeaad9
 
 let from_user = {
     address: "0xe9b90e14385d189f53a70c7d3399e3ba30c06a7e0e5cf651f0d464fec8dfe87c",
-    public_key: "0x2624d0d115d5c392045be2a074eeaa6e96d4257b752821b333865e6cfc6a6f79"
+    public_key: "0xd777e8e6b32c6762a3e387f2ff62b112993d0aa4083636a491cf619869971df5"
 }
 
 const APTOS_NETWORK: Network = NetworkToNetworkName[process.env.APTOS_NETWORK ?? Network.TESTNET];
