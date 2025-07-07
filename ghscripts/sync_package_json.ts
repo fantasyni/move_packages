@@ -3,7 +3,7 @@ import fs from "fs";
 
 let cwd = process.cwd();
 
-let sync_files = ["package.json"];
+let sync_files = ["package.json", ".npmrc"];
 
 // function updatePackageFiles() {
 //     let build_dir = get_build_dir();
