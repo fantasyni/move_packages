@@ -1,6 +1,6 @@
 {
-  "name": "@fantasyni/move_packages",
-  "version": "1.0.8",
+  "name": "@SnowFishLabs/move_packages",
+  "version": "1.0.0",
   "files": [
     "bytecode_modules/*.mv",
     "Buildinfo.yaml",
@@ -8,6 +8,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/fantasyni/move_packages.git"
+    "url": "https://github.com/SnowFishLabs/move_packages.git"
   }
 }
